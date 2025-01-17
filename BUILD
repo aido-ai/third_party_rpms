@@ -4,7 +4,8 @@ licenses(["notice"])
 
 exports_files(["LICENSE"])
 
-load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
+#load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
+load("@rules_pkg//pkg:tar.bzl", "pkg_tar")
 ################################################################################
 # Java 9 configuration
 ################################################################################
@@ -20,7 +21,7 @@ config_setting(
 # ZLIB configuration
 ################################################################################
 
-ZLIB_DEPS = ["@zlib_archive//:zlib"]
+ZLIB_DEPS = ["@zlib//:zlib"]
 
 ################################################################################
 # Protobuf Runtime Library
